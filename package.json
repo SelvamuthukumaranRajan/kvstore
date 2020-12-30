@@ -1,0 +1,19 @@
+{
+  "name": "kvstore",
+  "version": "1.0.0",
+  "description": "Simple key value JSON store",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "node_modules/.bin/ava tests/**/test.js --verbose",
+    "test:watch": "node_modules/.bin/ava --verbose --watch",
+    "delete": "rm -rf kvstore"
+  },
+  "keywords": [],
+  "author": "Selvamuthukumaran <selvamuthu452000@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "^3.14.0",
+    "nyc": "^15.1.0"
+  }
+}
