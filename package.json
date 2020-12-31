@@ -5,15 +5,16 @@
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
-    "test": "node_modules/.bin/ava tests/**/test.js --verbose",
+    "test": "node_modules/.bin/ava tests/**/test.js --verbose && npm run clean",
     "test:watch": "node_modules/.bin/ava --verbose --watch",
-    "delete": "rm -rf kvstore"
+    "clean": "shx rm -rf kvstore && shx echo Cleaned"
   },
   "keywords": [],
   "author": "Selvamuthukumaran <selvamuthu452000@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "ava": "^3.14.0",
-    "nyc": "^15.1.0"
+    "nyc": "^15.1.0",
+    "shelljs": "^0.8.4"
   }
 }

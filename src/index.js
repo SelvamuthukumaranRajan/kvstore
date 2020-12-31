@@ -21,7 +21,7 @@ class Kvstore {
       if (store.substr(store.length - 5) !== ".json") {
         store = join(store, "kvstore", "store.json");
       }
-      store = isAbsolute(store) ? store : join(process.env.PWD, store);
+      store = isAbsolute(store) ? store : join(process.cwd(), store);
     }
 
     if (fs.existsSync(store)) {
